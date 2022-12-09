@@ -8,7 +8,7 @@ Do the following for the given problem:
 
 // - Write a Function Decleration
 function convertToString(n) {
-  return String(n);
+  return String(34);
 }
 
 // - Write a Function Expression
@@ -42,17 +42,35 @@ Do the following with above problem.
 
 // - Write a Function Declaration
 
+function addOne(n) {
+  return(n);
+};
+
 // - Write a Function Expression
+
+let addOne = function (n) {
+  return(n);
+};
 
 // - Write an Arrow Function without curly brackets(if possible)
 
+let addOne = (n) => (n);
+
 // - Write an Arrow Function with curly brackets
 
+let addOne = (n) => {
+  return(n);
+};
+
 // - Execute the function
+addOne(13);
 
 // - Execute the function and store the return value in a variable.
 
+let Value = addOne(13);
+
 // - What is the typeof returnValue
+
 
 /* 2. Subtract one
 
@@ -62,6 +80,8 @@ Do the following with above problem.
 */
 
 // - Write a Function Declaration
+
+function substractOne (n)
 
 // - Write a Function Expression
 
