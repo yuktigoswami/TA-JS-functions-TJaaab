@@ -128,5 +128,5 @@ min(0, -10);
 
 function typeCheck(value) {
   // Your code goes here
-   return Object, boolian, number, string, null,  undefined;
+  
 }
