@@ -117,7 +117,7 @@ function sum(val1, val2) {
     typeof val1 == "string" &&
     typeof val2 == "string"
     ){
-    return val1 + val2;
+    return val1 + " " + val2;
   } else {
     alert ("Enter valid input");
   }
