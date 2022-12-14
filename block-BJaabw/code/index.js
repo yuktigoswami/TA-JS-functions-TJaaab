@@ -27,13 +27,11 @@ isInRange(1, 10, 19); // false
 */
 
 // - Write a Function Decleration for above problem
+
 function isInRange(lower, upper, n) {
-  if (n > lower && n < upper) {
-  return true;
-  } else {
-    return false; 
-  }
+  return n > lower && n < upper;
 }
+
 // - Execute the function with required parameter
 isInRange(3, 6, 9);
 isInRange(2, 8, 5);
@@ -56,18 +54,19 @@ Obese: BMI is 30 or more
 
 */
 
-function calculateBMI(BMI) {
-  height = heightInput.Value;
-  weigth = weigthInput.Value;
-  BMI = weight / (height * height);
-  if(BMI < 18.5){
-    return Underweight;
-  } else if((BMI > 18.5) && (BMI < 24.9)) {
-    return Normalwight;
-  } else if((BMI > 25) && (BMI < 29.9)) {
-    return Overweight;
-  } else (BMI >= 30 ); {
-    return Obese;
+function calculateBMI(weight, height) {
+  let BMI = weight / (height * height);
+  switch (true) {
+    case BMI < 18.5:
+      return "Underweight";
+    case BMI > 10.5 && BMI < 24.9:
+      return "Normal";
+    case BMI > 25 && BMI < 29.9:
+      return "Overweight";
+    case BMI > 30:
+      return "Obese";
+    default :
+      alert ("Enter Valid input");
   }
 }
 
@@ -83,14 +82,17 @@ Create a function that take the age are return the appropiate drink based on the
 */
 
 function appropiateDrinks(age) {
-  if (age < 14) {
+  switch (true) {
+    case age < 15:
       return "drink fruit juice";
-  } else if (age < 18) {
+    case age < 18:
       return "drink soda";
-  } else if (age < 21) {
+    case age < 21:
       return "drink fruit-flavored beer";
-  } else {
+    case age > 21:
       return "drink throat-piercing vodka";
+    default:
+      alert ("Enter Valid input");
   }
 }
 
@@ -105,14 +107,19 @@ Twist is when user passes anything other than number, or string value you should
 
 */
 
-function sum() {
-  let numbers = x, y;
-  if (x, y){
-   return x + y;
-  } else if ("firstName", "lastName"){
-    return `${firstName} + "" + ${lastName}`;
+function sum(val1, val2) {
+  if (
+    typeof val1 == "number" && 
+    typeof val2 == "number"
+    ){
+   return val1 + val2;
+  } else if ( 
+    typeof val1 == "string" &&
+    typeof val2 == "string"
+    ){
+    return val1 + val2;
   } else {
-    alert ("Enter valid values");
+    alert ("Enter valid input");
   }
 }
 
